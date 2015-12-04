@@ -128,7 +128,7 @@
         }
 
         wrongAnswer() {
-            this.playAudio(this.assetArray['wrong'], 0.8);
+            this.playAudio(this.assetArray['wrong'], 1);
 
             if(this.score>0)
                 this.score -= 10;

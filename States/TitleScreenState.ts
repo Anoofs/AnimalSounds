@@ -89,8 +89,7 @@
             this.currentMedia = new Media(src, null, null, null);
             this.currentMedia.play();
 
-            var timer = setTimeout(this.audioLoopCallback, 9000);
-            
+     //       var timer = setTimeout(this.audioLoopCallback, 9000);
 
         }
 
