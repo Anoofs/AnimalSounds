@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.greenlight.animalsounds"
+        versionCode = "1" 
+        version     = "1.8.7" >
+
+    <name>Animal Sounds</name>
+
+    <description>        
+	Educational Game for cognitive development of the sound made by animals
+    </description>
+
+    <preference name="orientation" value="portrait" />
+
+    <gap:plugin name="org.apache.cordova.media" version="0.2.3" />
+
+    <author email="anoofs@gmail.com">
+        Anoof Shaikh
+    </author>
+
+</widget>

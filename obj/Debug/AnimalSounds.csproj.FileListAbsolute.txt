@@ -1,0 +1,6 @@
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\bin\AnimalSounds.dll.config
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\bin\AnimalSounds.dll
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\bin\AnimalSounds.pdb
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\obj\Debug\AnimalSounds.csprojResolveAssemblyReference.cache
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\obj\Debug\AnimalSounds.dll
+c:\Users\anfalsha\Documents\Visual Studio 2013\Projects\AnimalSounds\AnimalSounds\obj\Debug\AnimalSounds.pdb
