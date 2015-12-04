@@ -177,7 +177,7 @@
              this.currentMedia.release();
             this.currentMedia = new Media(src, null, this.mediaError);
             this.currentMedia.play();
-            var timer = setTimeout(function () { this.currentMedia.stop(); }, duration*1000);
+            var timer = setTimeout(function () { this.currentMedia.release(); }, duration*1000);
 
         }
 
