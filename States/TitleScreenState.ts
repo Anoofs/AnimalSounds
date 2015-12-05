@@ -10,7 +10,7 @@
         helpBtn: Phaser.Button;
         aboutBtn: Phaser.Button;
         fx: Phaser.Sound;
-        currentMedia:Media;
+        currentMedia: Media;
 
         constructor() {
             super();
@@ -30,11 +30,11 @@
             //catSprite.scale.setTo(0.12);
 
 
-            this.playGameBtn = this.game.add.button(this.game.world.centerX , this.game.world.centerY + 60, 'menuBtn', Game.TitleScreenState.prototype.actionOnMenuBtn, this);
+            this.playGameBtn = this.game.add.button(this.game.world.centerX, this.game.world.centerY + 60, 'menuBtn', Game.TitleScreenState.prototype.actionOnMenuBtn, this);
             this.playGameBtn.name = 'GamePlayState';
             this.playGameBtn.scale.setTo(1, 1.4);
             this.playGameBtn.anchor.setTo(0.5);
-            var newgameTxt:Phaser.Sprite = this.game.add.sprite(this.playGameBtn.x, this.playGameBtn.y, "text_newgame");
+            var newgameTxt: Phaser.Sprite = this.game.add.sprite(this.playGameBtn.x, this.playGameBtn.y, "text_newgame");
             newgameTxt.anchor.setTo(0.5);
 
             this.helpBtn = this.game.add.button(this.playGameBtn.x, this.playGameBtn.y + this.playGameBtn.height, 'menuBtn', Game.TitleScreenState.prototype.actionOnMenuBtn, this);
@@ -51,14 +51,14 @@
             var aboutTxt = this.game.add.sprite(this.aboutBtn.x, this.aboutBtn.y, "text_about");
             aboutTxt.anchor.setTo(0.5);
 
-            this.buttonTween(this.playGameBtn,0);
-            this.buttonTween(newgameTxt,0);
+            this.buttonTween(this.playGameBtn, 0);
+            this.buttonTween(newgameTxt, 0);
 
-            this.buttonTween(this.helpBtn,1000);
-            this.buttonTween(helpTxt,1000);
+            this.buttonTween(this.helpBtn, 1000);
+            this.buttonTween(helpTxt, 1000);
 
-            this.buttonTween(this.aboutBtn,1500);
-            this.buttonTween(aboutTxt,1500);
+            this.buttonTween(this.aboutBtn, 1500);
+            this.buttonTween(aboutTxt, 1500);
 
             this.bgSoundSource = '/android_asset/www/Assets/Audio/titleMusic.ogg';
             this.playBgAudio(this.bgSoundSource);
@@ -78,18 +78,18 @@
             else if (buttonArg.name == "HelpScreenState")
                 this.game.state.add("HelpScreenState", Game.HelpScreenState, true);
 
-            else if (buttonArg.name == "AboutScreenState") 
+            else if (buttonArg.name == "AboutScreenState")
                 this.game.state.add("AboutScreenState", Game.AboutScreenState, true);
 
         }
 
         playBgAudio(src: string) {
-            if(this.currentMedia)
-            this.currentMedia.release();
+            if (this.currentMedia)
+                this.currentMedia.release();
             this.currentMedia = new Media(src, null, null, null);
             this.currentMedia.play();
 
-     //       var timer = setTimeout(this.audioLoopCallback, 9000);
+            //       var timer = setTimeout(this.audioLoopCallback, 9000);
 
         }
 
@@ -100,10 +100,9 @@
             this.playBgAudio(this.bgSoundSource);
         }
 
-        buttonTween(arg,delay) {
+        buttonTween(arg, delay) {
             var tween = this.add.tween(arg.scale).to({ x: 0.9, y: 0.9 }, 1500, "Linear", true, 0, -1);
             tween.yoyo(true, delay);
         }
-    }
     }
 } 

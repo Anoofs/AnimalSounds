@@ -1,16 +1,19 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var Game;
 (function (Game) {
-    var AnimalSounds = (function () {
-        //animalsArray: Object;
-        function AnimalSounds() {
-            this.game = new Phaser.Game(320, 480, Phaser.AUTO, 'content', { preload: this.preload, create: this.create });
-            //  this.animalsArray = { 'cat': {}}
+    var LoadState = (function (_super) {
+        __extends(LoadState, _super);
+        // fx: Phaser.Sound;
+        function LoadState() {
+            _super.call(this);
         }
-        AnimalSounds.prototype.preload = function () {
-            //this.game.load.spritesheet('catAnim', 'Assets/Images/catAnim.png', 960, 720);
+        LoadState.prototype.preload = function () {
             this.game.load.spritesheet('catAnim', 'Assets/Images/catAnim.png', 115, 86);
             this.game.load.image('playButton', 'Assets/Images/ui_playSound.png');
-            //this.game.load.spritesheet('playButton', 'Assets/Images/ui_playSound_anim.png', 320, 83);
             this.game.load.image('sheep', 'Assets/Images/sheep.jpg');
             this.game.load.image('elephant', 'Assets/Images/elephant.jpg');
             this.game.load.image('horse', 'Assets/Images/horse.jpg');
@@ -31,20 +34,6 @@ var Game;
             this.game.load.image('alligator', 'Assets/Images/alligator.png');
             //  this.game.load.image('pig', 'Assets/Images/pig.png');
             this.game.load.image('frog', 'Assets/Images/frog.png');
-            //this.game.load.audio('sheep_sound', 'file:///android_asset/www/Assets/Audio/sheep_sound.ogg');
-            //this.game.load.audio('elephant_sound', 'file:///android_asset/www/Assets/Audio/elephant_sound.ogg');
-            //this.game.load.audio('monkey_sound', 'file:///android_asset/www/Assets/Audio/monkey_sound.ogg');
-            //this.game.load.audio('horse_sound', 'file:///android_asset/www/Assets/Audio/horse_sound.ogg');
-            //this.game.load.audio('lion_sound', 'file:///android_asset/www/Assets/Audio/lion_sound.ogg');
-            //this.game.load.audio('dog_sound', 'file:///android_asset/www/Assets/Audio/dog_sound.ogg');
-            //this.game.load.audio('cat_sound', 'file:///android_asset/www/Assets/Audio/cat_sound.ogg');
-            //this.game.load.audio('bear_sound', 'file:///android_asset/www/Assets/Audio/bear_sound.ogg');
-            //this.game.load.audio('hyena_sound', 'file:///android_asset/www/Assets/Audio/hyena_sound.ogg');
-            //this.game.load.audio('pelican_sound', 'file:///android_asset/www/Assets/Audio/pelican_sound.ogg');
-            //this.game.load.audio('owl_sound', 'file:///android_asset/www/Assets/Audio/owl_sound.ogg');
-            //this.game.load.audio('correct', 'file:///android_asset/www/Assets/Audio/correct.ogg');
-            //this.game.load.audio('wrong', 'file:///android_asset/www/Assets/Audio/wrong.ogg');
-            // this.game.load.bitmapFont('desyrel', 'Assets/Fonts/desyrel.png', 'Assets/Fonts/desyrel.xml');
             this.game.load.image('bg', 'Assets/Images/title_bg.jpg');
             this.game.load.image('bg_text', 'Assets/Images/title_text.png');
             this.game.load.image('text_newgame', 'Assets/Images/title_btn_newgame.png');
@@ -58,18 +47,17 @@ var Game;
             this.game.load.image("correct_sprite", "Assets/Images/correct_sprite.png");
             this.game.load.image("wrong_sprite", "Assets/Images/wrong_sprite.png");
             this.game.load.image("gameover_sprite", "Assets/Images/gameover_sprite.png");
-            //this.game.load.bitmapFont('shortStack', 'Assets/Fonts/shortStack.png', 'Assets/Fonts/shortStack.xml');
             this.game.load.bitmapFont('nokia16', 'Assets/Fonts/nokia16.png', 'Assets/Fonts/nokia16.xml');
         };
-        AnimalSounds.prototype.create = function () {
+        LoadState.prototype.create = function () {
             this.game.state.add("TitleScreenState", Game.TitleScreenState, true);
             this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         };
-        return AnimalSounds;
-    })();
-    Game.AnimalSounds = AnimalSounds;
+        return LoadState;
+    })(Phaser.State);
+    Game.LoadState = LoadState;
 })(Game || (Game = {}));
 window.onload = function () {
     var game = new Game.AnimalSounds();
 };
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=LoadState.js.map

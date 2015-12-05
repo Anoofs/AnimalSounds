@@ -39,7 +39,7 @@ var Game;
             this.assetArray['wolf_sound'] = '/android_asset/www/Assets/Audio/wolf_sound.ogg';
             this.assetArray['tapir_sound'] = '/android_asset/www/Assets/Audio/tapir_sound.ogg';
             this.assetArray['peacock_sound'] = '/android_asset/www/Assets/Audio/peacock_sound.ogg';
-            this.assetArray['pig_sound'] = '/android_asset/www/Assets/Audio/pig_sound.ogg';
+            // this.assetArray['pig_sound'] = '/android_asset/www/Assets/Audio/pig_sound.ogg';
             this.assetArray['mouse_sound'] = '/android_asset/www/Assets/Audio/mouse_sound.ogg';
             this.assetArray['frog_sound'] = '/android_asset/www/Assets/Audio/frog_sound.ogg';
             this.assetArray['donkey_sound'] = '/android_asset/www/Assets/Audio/donkey_sound.ogg';
@@ -92,7 +92,7 @@ var Game;
             this.showCorrectModal();
         };
         GamePlayState.prototype.wrongAnswer = function () {
-            this.playAudio(this.assetArray['wrong'], 0.8);
+            this.playAudio(this.assetArray['wrong'], 1);
             if (this.score > 0)
                 this.score -= 10;
             this.scoreText.text = this.score;
@@ -129,11 +129,11 @@ var Game;
                 this.currentMedia.release();
             this.currentMedia = new Media(src, null, this.mediaError);
             this.currentMedia.play();
-            var timer = setTimeout(function () { this.currentMedia.stop(); }, duration * 1000);
+            var timer = setTimeout(function () { this.currentMedia.release(); }, duration * 1000);
         };
         GamePlayState.prototype.reload = function () {
             var animalsArray = ["elephant", "sheep", "horse", "monkey", "lion", "dog", "cat", "bear", "hyena", "pelican", "owl", "frog",
-                "donkey", "cow", "wolf", "tapir", "pig", "alligator", "mouse", "peacock"];
+                "donkey", "cow", "wolf", "tapir", "alligator", "mouse", "peacock"];
             this.topAnimal = Phaser.ArrayUtils.getRandomItem(animalsArray);
             do {
                 this.bottomAnimal = Phaser.ArrayUtils.getRandomItem(animalsArray);
@@ -155,8 +155,6 @@ var Game;
             this.buttonBottom.anchor.setTo(0.5);
             this.soundButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY - 125 - 30 - 10, 'playButton', Game.GamePlayState.prototype.listener, this);
             this.soundButton.name = 'playButton';
-            //   this.soundButton.animations.add('anim');
-            //   this.soundButton.animations.play('anim', 8, true);
             this.soundButton.anchor.setTo(0.5);
             this.buttonTween(this.soundButton, 2000);
         };

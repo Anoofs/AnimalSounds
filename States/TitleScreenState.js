@@ -65,21 +65,18 @@ var Game;
         TitleScreenState.prototype.playBgAudio = function (src) {
             if (this.currentMedia)
                 this.currentMedia.release();
-            this.currentMedia = new Media(src, null, null, Game.TitleScreenState.prototype.onStatus);
+            this.currentMedia = new Media(src, null, null, null);
             this.currentMedia.play();
-            //var timer = setTimeout(function () { currentMedia.play(); }, 9000);
+            //       var timer = setTimeout(this.audioLoopCallback, 9000);
+        };
+        TitleScreenState.prototype.update = function () {
+        };
+        TitleScreenState.prototype.audioLoopCallback = function () {
+            this.playBgAudio(this.bgSoundSource);
         };
         TitleScreenState.prototype.buttonTween = function (arg, delay) {
             var tween = this.add.tween(arg.scale).to({ x: 0.9, y: 0.9 }, 1500, "Linear", true, 0, -1);
             tween.yoyo(true, delay);
-        };
-        TitleScreenState.prototype.onStatus = function (status) {
-            if (status == 4) {
-                if (this.currentMedia)
-                    this.currentMedia.release();
-                this.currentMedia = new Media(this.bgSoundSource, null, null, null);
-                this.currentMedia.play();
-            }
         };
         return TitleScreenState;
     })(Phaser.State);

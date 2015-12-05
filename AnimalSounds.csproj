@@ -18,7 +18,7 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
+    <Content Include="load.css" />
     <Content Include="Assets\Audio\fx_mixdown.mp3" />
     <Content Include="Assets\Fonts\desyrel.png" />
     <Content Include="Assets\Fonts\desyrel.xml" />
@@ -34,13 +34,12 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="States\BootState.ts" />
+    <TypeScriptCompile Include="States\LoadState.ts" />
     <TypeScriptCompile Include="Media.d.ts" />
     <TypeScriptCompile Include="p2.d.ts" />
     <TypeScriptCompile Include="phaser.d.ts" />
     <TypeScriptCompile Include="pixi.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jqueryui\jqueryui.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="States\AboutScreenState.ts" />
     <TypeScriptCompile Include="States\GamePlayState.ts" />
     <TypeScriptCompile Include="States\HelpScreenState.ts" />
