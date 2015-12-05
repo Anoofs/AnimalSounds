@@ -8,7 +8,7 @@
     <name>Animal Sounds</name>
 
     <description>        
-	Educational Game for cognitive development of the sound made by animals
+	Educational Game for cognitive development of the sound made by animals.
     </description>
 
     <preference name="orientation" value="portrait" />
@@ -17,11 +17,13 @@
 
     <gap:plugin name="org.apache.cordova.media" version="0.2.3" />
 
+    <icon src="icon.png" platform="android" qualifier="xhdpi" />
+
    <gap:splash src="Assets/screen/android/drawable-mdpi/splash.9.png" gap:platform="android" gap:qualifier="port-mdpi"/>
    <gap:splash src="Assets/screen/android/drawable-hdpi/splash.9.png" gap:platform="android" gap:qualifier="port-hdpi" />
    <gap:splash src="Assets/screen/android/drawable-xhdpi/splash.9.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
 
-    <author email="anoofs@gmail.com">
+    <author email="anoof.shaikh@gmail.com">
         Anoof Shaikh
     </author>
 
