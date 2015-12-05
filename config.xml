@@ -13,6 +13,8 @@
 
     <preference name="orientation" value="portrait" />
 
+    <preference name="permissions" value="none"/>
+
     <gap:plugin name="org.apache.cordova.media" version="0.2.3" />
 
    <gap:splash src="Assets/screen/android/drawable-mdpi/splash.9.png" gap:platform="android" gap:qualifier="port-mdpi"/>
