@@ -46,7 +46,7 @@
             this.game.load.image('tapir', 'Assets/Images/tapir.png');
             this.game.load.image('wolf', 'Assets/Images/wolf.png');
             this.game.load.image('alligator', 'Assets/Images/alligator.png');
-            this.game.load.image('pig', 'Assets/Images/pig.png');
+          //  this.game.load.image('pig', 'Assets/Images/pig.png');
             this.game.load.image('frog', 'Assets/Images/frog.png');
 
             //this.game.load.audio('sheep_sound', 'file:///android_asset/www/Assets/Audio/sheep_sound.ogg');

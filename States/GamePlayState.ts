@@ -63,7 +63,7 @@
             this.assetArray['wolf_sound'] = '/android_asset/www/Assets/Audio/wolf_sound.ogg';
             this.assetArray['tapir_sound'] = '/android_asset/www/Assets/Audio/tapir_sound.ogg';
             this.assetArray['peacock_sound'] = '/android_asset/www/Assets/Audio/peacock_sound.ogg';
-            this.assetArray['pig_sound'] = '/android_asset/www/Assets/Audio/pig_sound.ogg';
+           // this.assetArray['pig_sound'] = '/android_asset/www/Assets/Audio/pig_sound.ogg';
             this.assetArray['mouse_sound'] = '/android_asset/www/Assets/Audio/mouse_sound.ogg';
             this.assetArray['frog_sound'] = '/android_asset/www/Assets/Audio/frog_sound.ogg';
             this.assetArray['donkey_sound'] = '/android_asset/www/Assets/Audio/donkey_sound.ogg';
